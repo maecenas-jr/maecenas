@@ -38,7 +38,7 @@ contract Checkbook {
     
     function() payable { }
     
-    function checkOut(uint check, uint amount, address receiver, uint8 sig_v, bytes32 sig_r, bytes32 sig_s)
+    function redeem(uint check, uint amount, address receiver, uint8 sig_v, bytes32 sig_r, bytes32 sig_s)
     {
         require(check < checks.length);
         require(amount <= this.balance);
